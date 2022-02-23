@@ -7,13 +7,20 @@ export default function CardList({ users }) {
     <div className="cardList">
       {users.map((user) => {
         return (
-          <Card
-            key={user.id}
-            id={user.id}
-            name={user.name}
-            email={user.email}
-            phoneNumber={user.phone_number}
-          />
+          <div className="cardContainer">
+            <p>{user.id}</p>
+            <p>{user.name}</p>
+            <p>{user.email}</p>
+            <p>{user.phoneNumber}</p>
+          </div>
+
+          // <Card
+          //   key={user.id}
+          //   id={user.id}
+          //   name={user.name}
+          //   email={user.email}
+          //   phoneNumber={user.phone_number}
+          // />
         );
       })}
     </div>
